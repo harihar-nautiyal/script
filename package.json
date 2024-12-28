@@ -1,0 +1,45 @@
+{
+  "name": "@hn-studios/script",
+  "version": "1.0.0",
+  "main": "out/init.lua",
+  "scripts": {
+    "build": "rbxtsc",
+    "watch": "rbxtsc -w",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "Roblox",
+    "Roblox Ts",
+    "Harihar Nautiyal",
+    "Script",
+    "Roblox Script"
+  ],
+  "author": "Harihar Nautiyal",
+  "license": "ISC",
+  "description": "A TypeScript package for Roblox that allows easy creation and management of different script types with a clean, type-safe API",
+  "types": "out/index.d.ts",
+  "files": [
+    "out",
+    "!**/*.tsbuildinfo"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harihar-nautiyal/script.git"
+  },
+  "bugs": {
+    "url": "https://github.com/harihar-nautiyal/script/issues"
+  },
+  "homepage": "https://github.com/harihar-nautiyal/script#readme",
+  "devDependencies": {
+    "@rbxts/compiler-types": "^3.0.0-types.0",
+    "@rbxts/types": "^1.0.813",
+    "roblox-ts": "^3.0.0",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@rbxts/services": "^1.5.5"
+  }
+}
