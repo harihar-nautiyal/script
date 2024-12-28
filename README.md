@@ -17,55 +17,19 @@ A TypeScript package for Roblox that allows easy creation and management of diff
 -   Easy script control (Start/Stop/Destroy)
 -   Module script support with require functionality
 
-## Important Configuration
-
-1. **Update `tsconfig.json`**
-    Add `@hn-studios` to your `typeRoots`:
-
-    ```json
-    {
-        "compilerOptions": {
-            "typeRoots": [
-                "node_modules/@rbxts",
-                "node_modules/@hn-studios",  // Add this line
-                "node_modules/@types"
-            ]
-        }
-    }
-    ```
-
-2. **Update `default.project.json`**
-    Add the `@hn-studios` scope to your Rojo configuration:
-
-    ```json
-    {
-        "ReplicatedStorage": {
-            "$className": "ReplicatedStorage",
-            "rbxts_include": {
-                "$path": "include",
-                "node_modules": {
-                    "$className": "Folder",
-                    "@rbxts": {
-                        "$path": "node_modules/@rbxts"
-                    },
-                    "@hn-studios": {           // Add this block
-                        "$path": "node_modules/@hn-studios"
-                    }
-                }
-            }
-        }
-    }
-    ```
-
 ## Installation
+1. Initialize your project:
 
-1. Install the package using npm:
+```bash
+npx @hn-studios/cli init
+```
+2. Install the package using npm:
 
     ```bash
     npm install @hn-studios/script
     ```
 
-2. Add it to your Roblox TypeScript project:
+3. Add it to your Roblox TypeScript project:
 
     ```typescript
     import { Script } from "@hn-studios/script";
